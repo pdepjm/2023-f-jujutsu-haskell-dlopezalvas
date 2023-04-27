@@ -15,7 +15,7 @@ data Hechicero = UnHechicero {
     grado :: Number,
     clan :: String,
     rol :: String
-}
+} deriving Show
 
 nobara :: Hechicero
 nobara = UnHechicero "Nobara" 1 3 "Kugisaki" "Estudiante"
@@ -29,4 +29,7 @@ maki = UnHechicero "Maki" 3 4 "Zenin" "Estudiante"
 yuji :: Hechicero 
 yuji = UnHechicero "Yuji" 0 1 "Itadori" "Estudiante"
 
+
+tieneExperiencia :: Hechicero -> Bool
+tieneExperiencia hechicero = antiguedad hechicero > 1
 
